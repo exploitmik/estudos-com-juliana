@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  box-shadow: 0 16px 25px 1px rgba(0, 0, 0, 0.16);
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card__content {
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+
+.card__info {
+  display: flex;
+}
+
+.card__status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card__status--alive::before,
+.card__status--dead::before,
+.card__status--unk::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  display: flex;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.card__status--alive::before {
+  background-color: green;
+}
+
+.card__status--dead::before {
+  background-color: red;
+}
+
+.card__status--unk::before {
+  background-color: orange;
+}
+
+.card__species {
+}
+
+.card__info > * + * {
+  margin-left: 1rem;
+}
